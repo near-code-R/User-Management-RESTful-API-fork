@@ -1,0 +1,75 @@
+POST http://localhost:3000/api/user/register
+Content-Type: application/json
+Accept: application/json
+
+{
+    "userName":"hilmi",
+    "password":"12345",
+    "confirmPassword":"12345",
+    "name":"deni"
+}
+
+###
+POST http://localhost:3000/api/user/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "password":"rahasia",
+    "name":"deni"
+}
+### token 5821645f6b3b7dd1e1d8
+GET http://localhost:3000/api/user/current
+Authorization: 5e3796a185846a5a04b6
+
+####
+PATCH http://localhost:3000/api/user/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 0d1e8fe632b0f5c4a9fe
+
+{ "name": "deni", "password": "rahasia" }
+
+
+###
+DELETE http://localhost:3000/api/user/logout
+Authorization: 0d1e8fe632b0f5c4a9fe
+
+###
+GET  http://localhost:3000/api/user/contact
+Authorization: 5e3796a185846a5a04b6
+
+###
+
+POST  http://localhost:3000/api/user/contact
+Content-Type: application/json
+Accept: application/json
+Authorization: 5e3796a185846a5a04b6
+
+{
+    "firts_name": "acill",
+            "last_name": "ganteng",
+            "phone_number": "948923849328",
+            "email": "acil@gmail.com"
+}
+
+
+###
+
+POST  http://localhost:3000/api/user/address
+Content-Type: application/json
+Accept: application/json
+Authorization: 5e3796a185846a5a04b6
+
+{
+     "street":"kawali",
+            "city":"ciamis",
+            "province":"jawa barat",
+            "country":"singandaru",
+            "kodePos":"46253"
+}
+
+###
+GET http://localhost:3000/api/user/address
+Accept: application/json
+Authorization: 5e3796a185846a5a04b6
