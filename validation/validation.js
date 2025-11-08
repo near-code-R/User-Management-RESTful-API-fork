@@ -9,3 +9,5 @@ const validation = (schema, request) => {
 export {
     validation
 }
+
+// testing fetch 
